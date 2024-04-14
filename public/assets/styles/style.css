@@ -1,0 +1,230 @@
+.fs-4 {
+    font-family: Arial, sans-serif;
+    color: #7469B6;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.greetings h3{
+    font-family: "Roboto Serif" ;
+    font-weight: 100;
+}
+
+.introduction {
+    background-color: #AD88C6;
+    position: relative;
+    height: 90vh;
+    padding: 250px;
+    text-align: center;
+    
+}
+
+@media (max-width: 768px) {
+    .introduction {
+        padding: 100px;
+        height: auto;
+    }
+}
+
+.her-subtitle {
+    font-family: "sans-serif";
+    font-size: 16px;
+}
+
+.bitmoji {
+    width: 100px;
+    margin-right: 10px;
+    margin-left: -50px;
+}
+
+.nav-pills .nav-link {
+    color: #7469B6; 
+}
+
+.nav-pills .nav-link.active{
+    background-color: #7469B6; 
+    color: #FFE6E6;
+}
+
+.headshot-container{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px; 
+    height: 150px;
+}
+
+.headshot {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name{
+    font-family: 'Bebas Neue';
+    letter-spacing: 5px;
+}
+
+.social-container{
+    position: absolute;
+    bottom: 5%;
+    left: 47%;
+}
+
+.linkedin{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.gmail{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.library{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+
+.tinDog{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+.easyEatz{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+.todoList{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .fade-in.is-visible {
+    opacity: 1;
+  }
+
+.projects-title {
+    background-color: #D3C0E0; /* Apply background color */
+}
+
+.projects {
+    background-color: #D3C0E0; /* Apply background color */
+}
+
+.card {
+    background-color: #FAF4FC; /* Apply background color to cards */
+}
+
+
+.resume-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D3C0E0;
+}
+.resume-section img {
+    max-width: 100%; /* Allow the image to scale down to fit its container */
+    max-height: 100%; /* Allow the image to scale down to fit its container */
+    width: auto;
+    height: auto;
+    margin: auto; /* Center the image horizontally and vertically */
+}
+
+.download-button {
+    display: block;
+    width: 200px; /* Adjust width as needed */
+    padding: 10px;
+    margin: 20px auto 0; /* Center the button horizontally and add space above */
+    background-color: #AD88C6; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #AD88C6; /* Button background color on hover */
+}
+
+.contact{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: column;
+    padding: 150px;
+    background-color: #D3C0E0;
+}
+
+.contact h2{
+    color: #7469B6;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue'
+}
+
+.contact p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 300px; /* Set the width of the form */
+}
+
+/* Style for form inputs */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Add margin bottom to create space between inputs */
+    border: 1px solid #FAF4FC; /* Add border */
+    border-radius: 5px;
+}
+
+/* Style for submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #7469B6; /* Change the background color of the button */
+    color: #FAF4FC; /* Change the text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect for submit button */
+input[type="submit"]:hover {
+    background-color: #7469B6; /* Darken the background color on hover */
+}
+
+  /* Media query for screens less than 768px wide */
+@media (max-width: 768px) {
+    .projects .container .row {
+      /* Adjust number of columns here */
+      grid-template-columns: repeat(1, 1fr); /* One card per row */
+    }
+  }
