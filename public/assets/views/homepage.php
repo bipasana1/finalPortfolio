@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Bipasana Poudel's Portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -17,13 +17,13 @@
         <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-0 border-bottom">
             <div class="d-flex align-items-center">
                 <img src="./images/bitmoji.jpeg" alt="Bipasana's Bitmoji" class="bitmoji">
-                <a href="./index.html" class="text-decoration-none">
+                <a href="./homepage.html" class="text-decoration-none">
                     <span class="fs-4">Bipasana Poudel</span>
                 </a>
             </div>
     
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./homepage.html" class="nav-link active" aria-current="page">Home</a></li>
                 <li class="nav-item"><a href="./projects.html" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="./resume.html" class="nav-link">Resume</a></li>
                 <li class="nav-item"><a href="./contact.html" class="nav-link">Contact</a></li>
@@ -67,7 +67,7 @@
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
                                     </div>
                                 </div>
                             </div>
@@ -80,7 +80,7 @@
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +93,7 @@
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
                                     </div>
                                 </div>
                             </div>
@@ -106,7 +106,7 @@
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
                                     </div>
                                 </div>
                             </div>
@@ -132,7 +132,7 @@
     </div>
     
 
-    <script src="index.js" charset="UTF-8"></script>
+    <script src="../js/index.js" charset="UTF-8"></script>
 </body>
 
 

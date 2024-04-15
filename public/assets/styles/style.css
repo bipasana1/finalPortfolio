@@ -127,15 +127,15 @@
   }
 
 .projects-title {
-    background-color: #D3C0E0; /* Apply background color */
+    background-color: #D3C0E0;
 }
 
 .projects {
-    background-color: #D3C0E0; /* Apply background color */
+    background-color: #D3C0E0; 
 }
 
 .card {
-    background-color: #FAF4FC; /* Apply background color to cards */
+    background-color: #FAF4FC;
 }
 
 
@@ -147,20 +147,20 @@
     background-color: #D3C0E0;
 }
 .resume-section img {
-    max-width: 100%; /* Allow the image to scale down to fit its container */
-    max-height: 100%; /* Allow the image to scale down to fit its container */
+    max-width: 100%; 
+    max-height: 100%;
     width: auto;
     height: auto;
-    margin: auto; /* Center the image horizontally and vertically */
+    margin: auto; 
 }
 
 .download-button {
     display: block;
-    width: 200px; /* Adjust width as needed */
+    width: 200px;
     padding: 10px;
-    margin: 20px auto 0; /* Center the button horizontally and add space above */
-    background-color: #AD88C6; /* Button background color */
-    color: #fff; /* Button text color */
+    margin: 10px auto 0; 
+    background-color: #AD88C6; 
+    color: #fff; 
     border: none;
     border-radius: 5px;
     text-align: center;
@@ -169,7 +169,7 @@
 }
 
 .download-button:hover {
-    background-color: #AD88C6; /* Button background color on hover */
+    background-color: #AD88C6; 
 }
 
 .contact{
@@ -193,38 +193,33 @@
 }
 
 form {
-    width: 300px; /* Set the width of the form */
+    width: 300px; 
 }
 
-/* Style for form inputs */
 input[type="text"] {
     width: 100%;
     padding: 10px;
-    margin-bottom: 15px; /* Add margin bottom to create space between inputs */
-    border: 1px solid #FAF4FC; /* Add border */
+    margin-bottom: 15px;
+    border: 1px solid #FAF4FC;
     border-radius: 5px;
 }
 
-/* Style for submit button */
 input[type="submit"] {
     width: 100%;
     padding: 10px;
-    background-color: #7469B6; /* Change the background color of the button */
-    color: #FAF4FC; /* Change the text color */
+    background-color: #7469B6;
+    color: #FAF4FC;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-/* Hover effect for submit button */
 input[type="submit"]:hover {
-    background-color: #7469B6; /* Darken the background color on hover */
+    background-color: #7469B6; 
 }
 
-  /* Media query for screens less than 768px wide */
 @media (max-width: 768px) {
     .projects .container .row {
-      /* Adjust number of columns here */
-      grid-template-columns: repeat(1, 1fr); /* One card per row */
+      grid-template-columns: repeat(1, 1fr); 
     }
   }

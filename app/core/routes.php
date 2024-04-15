@@ -1,15 +1,16 @@
 <?php
 
+use app\controllers\ProjectController;
 use app\controllers\UserController;
 
 $routes = [
     'users' => [
-        'controller' => UserController::class,
+        'controller' => ProjectController::class,
         'GET' => 'getUsers',
         'POST' => 'saveUsers'
     ],
     'view-users' => [
-        'controller' => UserController::class,
+        'controller' => ProjectController::class,
         'GET' => 'getUsers',
     ]
 ];
