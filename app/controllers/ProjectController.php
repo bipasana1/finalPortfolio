@@ -1,36 +1,55 @@
 <?php
 
 namespace app\controllers;
-
 use app\core\Controller;
 use app\models\Project;
 
 class ProjectController extends Controller
 {
-    public function actionIndex()
+    public function getProjects()
     {
-        // Create an instance of the Project model
         $projectModel = new Project();
-        
-        // Fetch all projects from the database
+        header("Content-Type: application/json");
         $projects = $projectModel->getAllProjects();
-        
-        // Return projects as JSON
-        return $this->asJson($projects);
+        echo json_encode($projects);
+        exit();
     }
-    
-    public function actionView($id)
+
+    public function getProject($id)
     {
-        // Fetch a project by ID from the database
         $projectModel = new Project();
-        $project = $projectModel->findOne($id);
-        
-        // If project is not found, throw a 404 Not Found exception
+        header("Content-Type: application/json");
+        $project = $projectModel->getProjectById($id);
         if (!$project) {
-            throw new NotFoundHttpException('The requested project does not exist.');
+            http_response_code(404);
+            echo json_encode(['error' => 'Project not found']);
+            exit();
         }
-        
-        // Return the project as JSON
-        return $this->asJson($project);
+        echo json_encode($project);
+        exit();
     }
-}
+
+    public function saveProject()
+    {
+        $projectData = [
+            'title' => $_POST['title'] ?? '',
+            'description' => $_POST['description'] ?? '',
+            'link' => $_POST['link'] ?? '',
+            'skills' => $_POST['skills'] ?? '',
+            'tools' => $_POST['tools'] ?? ''
+        ];
+
+        $projectModel = new Project();
+        $success = $projectModel->saveProject($projectData);
+        
+        if ($success) {
+            http_response_code(201);
+            echo json_encode(['message' => 'Project created successfully']);
+        } else {
+            http_response_code(500); // Server Error
+            echo json_encode(['message' => 'Failed to save project']);
+        }
+        exit();
+    }
+
+} 

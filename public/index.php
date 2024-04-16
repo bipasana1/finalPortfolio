@@ -1,16 +1,52 @@
 <?php
+require_once "../app/core/Database.php"; 
+require_once "../app/models/Project.php";
+require_once "../app/core/Controller.php";
+require_once "../app/controllers/MainController.php";
+require_once "../app/controllers/ProjectController.php";
+require_once "../app/controllers/ResumeController.php";
+require_once "../app/controllers/ContactController.php";
 
-require_once '../app/core/init.php';
-require_once '../app/core/routes.php';
+//set our env variables
 $env = parse_ini_file('../.env');
 require '../app/core/config.php';
 
-use app\core\Router;
+use app\controllers\MainController;
+use app\controllers\ProjectController;
+use app\controllers\ResumeController;
+use app\controllers\ContactController;
 
-require_once __DIR__ . '/helpers.php';
+$uri = strtok($_SERVER["REQUEST_URI"], '?');
 
-//to add a new route add to the app/core/routes.php array
-$router = new Router($routes);
-$router->serveRoute();
+if ($uri === '/' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $mainController = new MainController();
+    $mainController->homepage();
+}
+
+if ($uri === '/projects' && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $projectController = new ProjectController();
+    $projectController->getProjects();
+}
+
+if (preg_match('/^\/projects\/([0-9]+)$/', $uri, $matches) && $_SERVER['REQUEST_METHOD'] === 'GET') {
+    $projectId = $matches[1];
+    $projectController = new ProjectController();
+    $projectController->getProject($projectId);
+}
+
+if ($uri === '/projects' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    $projectController = new ProjectController();
+    $projectController->saveProject();
+}
+
+if ($uri === '/resume' && $_SERVER['REQUEST_METHOD'] === 'GET') { // Updated route for resume
+    $resumeController = new ResumeController();
+    $resumeController->resumeView();
+}
+
+if ($uri === '/contact' && $_SERVER['REQUEST_METHOD'] === 'GET') { // Updated route for contact
+    $contactController = new ContactController();
+    $contactController->contactView();
+}
+
 ?>
-
