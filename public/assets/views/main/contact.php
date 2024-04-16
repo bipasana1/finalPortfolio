@@ -10,7 +10,7 @@
 <div class="container">
     <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-0 border-bottom">
         <div class="d-flex align-items-center">
-            <img src="./images/bitmoji.jpeg" alt="Bipasana's Bitmoji" class="bitmoji">
+            <img src="./assets/views/images/bitmoji.jpeg" alt="Bipasana's Bitmoji" class="bitmoji">
             <a href="./homepage.php" class="text-decoration-none">
                 <span class="fs-4">Bipasana Poudel</span>
             </a>
@@ -38,10 +38,10 @@
     </form>
     <div class="social-container">                
         <a href="https://www.linkedin.com/in/bipasanapoudel/" class="text-decoration-none">
-            <img class="linkedin" src="./images/linkedin.jpg" alt="Bipasana's linkedin">   
+        <img class="linkedin" src="./images/linkedin.jpg" alt="Bipasana's LinkedIn">
         </a>
         <a href="mailto:bipasana12@gmail.com">
-            <img class="gmail" src="./images/gmail.png" alt="Send Email to Bipasana">
+            <img class="gmail" src="<?= APP_IMAGES ?>/gmail.png" alt="Send Email to Bipasana">
         </a>              
     </div>
 </div>
