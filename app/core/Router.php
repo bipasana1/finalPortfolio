@@ -31,5 +31,6 @@ class Router
             $homepageController = new MainController();
             $homepageController->homepage();
         }
+        
     }
 }

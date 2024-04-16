@@ -1,7 +1,5 @@
 <?php 
 
-global $env;
-
 if($_SERVER['SERVER_NAME'] == 'localhost')
 {
 	/** database config **/

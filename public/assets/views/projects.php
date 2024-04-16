@@ -17,7 +17,7 @@
         <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-0 border-bottom">
             <div class="d-flex align-items-center">
                 <img src="./images/bitmoji.jpeg" alt="Bipasana's Bitmoji" class="bitmoji">
-                <a href="./homepage.html" class="text-decoration-none">
+                <a href="./homepage.php" class="text-decoration-none">
                     <span class="fs-4">Bipasana Poudel</span>
                 </a>
             </div>
@@ -32,6 +32,6 @@
     </div>
 
 
-    
+
     <script src="../js/project.js" charset="UTF-8"></script>
 </body>
