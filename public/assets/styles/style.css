@@ -23,13 +23,6 @@
     
 }
 
-@media (max-width: 768px) {
-    .introduction {
-        padding: 100px;
-        height: auto;
-    }
-}
-
 .her-subtitle {
     font-family: "sans-serif";
     font-size: 16px;
