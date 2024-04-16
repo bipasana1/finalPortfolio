@@ -8,6 +8,6 @@ class ContactController extends Controller
 {
     public function contactView()
     {
-        include '../public/assets/views/contact.php';
+        include_once '../public/assets/views/contact.php';
     }
 }
