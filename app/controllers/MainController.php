@@ -14,16 +14,16 @@ class MainController extends Controller
     }
     public function resume()
     {
-        include '../public/assets/views/resume.php';
+        include '../public/assets/views/main/resume.php';
     }
     public function projects()
     {
-        include '../public/assets/views/projects.php';
+        include '../public/assets/views/main/projects.php';
         
     }
     public function contact()
     {
-        include '../public/assets/views/contact.php';
+        include '../public/assets/views/main/contact.php';
     
     }
     public function notFound()
