@@ -1,0 +1,218 @@
+.fs-4 {
+    font-family: Arial, sans-serif;
+    color: #7469B6;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1px;
+}
+
+.greetings h3{
+    font-family: "Roboto Serif" ;
+    font-weight: 100;
+}
+
+.introduction {
+    background-color: #AD88C6;
+    position: relative;
+    height: 90vh;
+    padding: 250px;
+    text-align: center;
+    
+}
+
+.her-subtitle {
+    font-family: "sans-serif";
+    font-size: 16px;
+}
+
+.bitmoji {
+    width: 100px;
+    margin-right: 10px;
+    margin-left: -50px;
+}
+
+.nav-pills .nav-link {
+    color: #7469B6; 
+}
+
+.nav-pills .nav-link.active{
+    background-color: #7469B6; 
+    color: #FFE6E6;
+}
+
+.headshot-container{
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 150px; 
+    height: 150px;
+}
+
+.headshot {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.name{
+    font-family: 'Bebas Neue';
+    letter-spacing: 5px;
+}
+
+.social-container{
+    position: absolute;
+    bottom: 5%;
+    left: 47%;
+}
+
+.linkedin{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    
+}
+
+.gmail{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
+
+.library{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+
+.tinDog{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+.easyEatz{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+.todoList{
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+} 
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  
+  .fade-in.is-visible {
+    opacity: 1;
+  }
+
+.projects-title {
+    background-color: #D3C0E0;
+}
+
+.projects {
+    background-color: #D3C0E0; 
+}
+
+.card {
+    background-color: #FAF4FC;
+}
+
+
+.resume-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D3C0E0;
+}
+.resume-section img {
+    max-width: 100%; 
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin: auto; 
+}
+
+.download-button {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    margin: 10px auto 0; 
+    background-color: #AD88C6; 
+    color: #fff; 
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: #AD88C6; 
+}
+
+.contact{
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    flex-direction: column;
+    padding: 150px;
+    background-color: #D3C0E0;
+}
+
+.contact h2{
+    color: #7469B6;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue'
+}
+
+.contact p{
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+form {
+    width: 300px; 
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #FAF4FC;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #7469B6;
+    color: #FAF4FC;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #7469B6; 
+}
+
+@media (max-width: 768px) {
+    .projects .container .row {
+      grid-template-columns: repeat(1, 1fr); 
+    }
+  }
