@@ -41,7 +41,7 @@
         <img class="linkedin" src="./images/linkedin.jpg" alt="Bipasana's LinkedIn">
         </a>
         <a href="mailto:bipasana12@gmail.com">
-            <img class="gmail" src="<?= APP_IMAGES ?>/gmail.png" alt="Send Email to Bipasana">
+            <img class="gmail" src="./images/gmail.png" alt="Send Email to Bipasana">
         </a>              
     </div>
 </div>

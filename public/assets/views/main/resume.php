@@ -25,7 +25,7 @@
     </div>
 
     <div class="resume-section">
-        <img src="/public/assets/views/bpoudelResume.png" alt="Resume Image">
+        <img src="/public/assets/images/bpoudelResume.png" alt="Resume Image">
         <a href="./images/bpoudelResume.pdf" class="download-button" target="_blank">Download Resume</a>
     </div>
 
