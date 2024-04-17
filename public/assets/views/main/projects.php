@@ -30,8 +30,68 @@
             </ul>
         </header>
     </div>
-
-
-
-    <script src="../js/project.js" charset="UTF-8"></script>
+    <div class="text-center py-3">
+            <h2 class="projects-title">Projects</h2>
+        </div>
+    
+    <div class="projects">
+        <div class="album py-5 card-container">
+            <div class="container">
+                <div class="row row-cols-2 g-3">
+                    <div class="col">
+                        <div class="card shadow-sm fade-in">
+                            <img class="library" src="./assets/views/images/library.jpg" alt="library database">
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm fade-in">
+                            <img class="tinDog" src="./assets/views/images/tinDog.png" alt="tindog database">                    
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm fade-in">
+                            <img class="easyEatz" src="./assets/views/images/easyEatz.png" alt="easyeatz">   
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card shadow-sm fade-in">
+                            <img class="todoList" src="./assets/views/images/todoList.jpeg" alt="To-do list database">                    
+                            <div class="card-body">
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="./assets/js/index.js" charset="UTF-8"></script>
 </body>

@@ -21,6 +21,11 @@ class MainController extends Controller
         include '../public/assets/views/main/projects.php';
         
     }
+    public function projectDetail()
+    {
+        include '../public/assets/views/main/project_detail.php';
+        
+    }
     public function contact()
     {
         include '../public/assets/views/main/contact.html';
