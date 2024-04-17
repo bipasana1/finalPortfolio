@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function(){
     new Typed('.typed', {
         strings: ["Web developer", "Web designer", "Content creator", "SEO specialist"], // Your typed items
-        typeSpeed: 70, // Typing speed in milliseconds
-        loop: true // Whether to loop through the typed items
+        typeSpeed: 70, 
+        loop: true 
     });
 });
 
@@ -14,6 +14,6 @@ const observer = new IntersectionObserver((entries) => {
     });
   });
   
-  const cards = document.querySelectorAll('.card');  // Select all cards
-  cards.forEach((card) => observer.observe(card));  // Observe each card
+  const cards = document.querySelectorAll('.card');  
+  cards.forEach((card) => observer.observe(card)); 
   

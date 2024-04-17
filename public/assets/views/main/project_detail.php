@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Bipasana Poudel's Portfolio</title>
+    <title>Bipasana Poudel's Portfolio - Project Details</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,76 +21,35 @@
             </div>
             <ul class="nav nav-pills">
                 <li class="nav-item"><a href="./homepage.php" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="./projects.php" class="nav-link active" aria-current="page">Projects</a></li>
+                <li class="nav-item"><a href="./projects.php" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="./resume.php" class="nav-link">Resume</a></li>
                 <li class="nav-item"><a href="./contact.php" class="nav-link">Contact</a></li>
             </ul>
         </header>
     </div>
 
-    <div class="text-center py-3">
-            <h2 class="projects-title">Projects</h2>
-        </div>
-    
-    <div class="projects">
-        <div class="album py-5 card-container">
-            <div class="container">
-                <div class="row row-cols-2 g-3">
-                    <div class="col">
-                        <div class="card shadow-sm fade-in">
-                            <img class="library" src="./assets/views/images/library.jpg" alt="library database">
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm fade-in">
-                            <img class="tinDog" src="./assets/views/images/tinDog.png" alt="tindog database">                    
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm fade-in">
-                            <img class="easyEatz" src="./assets/views/images/easyEatz.png" alt="easyeatz">   
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card shadow-sm fade-in">
-                            <img class="todoList" src="./assets/views/images/todoList.jpeg" alt="To-do list database">                    
-                            <div class="card-body">
-                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">More Details</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <script src="./assets/js/index.js" charset="UTF-8"></script>
+    <?php
+    require_once 'controllers/ProjectsController.php';
+
+    $projectId = isset($_GET['id']) ? (int)$_GET['id'] : null;
+
+    $projectsController = new ProjectsController($finalPortfolio);
+
+    $project = $projectsController->getProjectDetails($projectId);
+    ?>
+
+    <div class="container mt-5">
+        <?php if ($project): ?>
+            <h2><?php echo $project->getTitle(); ?></h2>
+            <p><?php echo $project->getDescription(); ?></p>
+            <p><b>Skills Used:</b> <?php echo $project->getSkills(); ?></p>
+            <p><b>Tools Used:</b> <?php echo $project->getTools(); ?></p>
+            <a href="<?php echo $project->getLink(); ?>" target="_blank" class="btn btn-primary">View Project</a>
+        <?php else: ?>
+            <p>Project not found.</p>
+        <?php endif; ?>
+    </div>
+
+    <script src="./assets/js/index.js" charset="UTF-8"></script>
 </body>
 </html>

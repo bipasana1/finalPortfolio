@@ -40,8 +40,8 @@
             <div class="container">
                 <div class="row row-cols-2 g-3">
                     <div class="col">
-                        <div class="card shadow-sm fade-in">
-                            <img class="library" src="./assets/views/images/library.jpg" alt="library database">
+                        <div class="card shadow-sm fade-in" data-project-id="<?php echo $project['project_id']; ?>">
+                            <img class="easyEatz" src="./assets/views/images/easyEatz.png" alt="easyeatz database">
                             <div class="card-body">
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -67,7 +67,7 @@
                     </div>
                     <div class="col">
                         <div class="card shadow-sm fade-in">
-                            <img class="easyEatz" src="./assets/views/images/easyEatz.png" alt="easyeatz">   
+                            <img class="library" src="./assets/views/images/library.jpg" alt="library database">   
                             <div class="card-body">
                                 <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                                 <div class="d-flex justify-content-between align-items-center">
@@ -96,22 +96,23 @@
         </div>
         <script src="./assets/js/index.js" charset="UTF-8"></script>
         <script>
-            $(document).ready(function() {
-                $(document).on('click', '.btn-outline-secondary', function() {
-                    var card = $(this).closest('.card');
-                    var projectId = card.data('project-id');
-                    $.ajax({
-                        url: 'project_detail.php',
-                        type: 'GET',
-                        data: { id: projectId },
-                        success: function(data) {
-                            console.log(data);
-                        },
-                        error: function(jqXHR, textStatus, errorThrown) {
-                            console.error("Error fetching project details:", textStatus, errorThrown);
-                        }
-                    });
+        $(document).ready(function() {
+            $(document).on('click', '.btn-outline-secondary', function() {
+                var card = $(this).closest('.card');
+                var projectId = card.data('project-id');
+
+                $.ajax({
+                    url: 'project_detail.php',
+                    type: 'GET',
+                    data: { id: projectId },
+                    success: function(data) {
+                        $('#projectDetails').html(data); // Assuming the response is HTML
+                    },
+                    error: function(jqXHR, textStatus, errorThrown) {
+                        console.error("Error fetching project details:", textStatus, errorThrown);
+                    }
                 });
             });
-        </script>
+        });
+    </script>
 </body>

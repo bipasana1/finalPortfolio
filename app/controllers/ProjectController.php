@@ -1,30 +1,32 @@
 <?php
-//Fetching project from the database
-// Create a function to handle request for project Details
-//Get project ID from the user click
-// Call project model method to fetch the specific project Details
-//Prepare the retrives data for use in the frontend
 
+require_once 'models/Project.php';
 
-class ProjectController {
+class ProjectsController {
+  private $db;
 
-    private $db; // Database connection object
+  public function __construct($db) {
+    $this->db = $db; 
+  }
 
-    public function __construct($db) {
-        $this->db = $db;
+  public function getProjectDetails($projectId) {
+    $sql = "SELECT * FROM projects WHERE project_id = :projectId";
+    $stmt = $this->db->prepare($sql);
+    $stmt->bindParam(":projectId", $projectId, PDO::PARAM_INT);
+    $stmt->execute();
+    $projectData = $stmt->fetch(PDO::FETCH_ASSOC); 
+
+    if ($projectData) {
+      return new Project(
+        $projectData['project_id'],
+        $projectData['title'],
+        $projectData['description'],
+        $projectData['skills_used'],
+        $projectData['tools_used'],
+        $projectData['link']
+      );
+    } else {
+      return null; 
     }
-
-    public function getProjectDetails($projectId) {
-        $sql = "SELECT * FROM projects WHERE id = :id";
-        $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':id', $projectId, PDO::PARAM_INT);
-        $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if ($result) {
-            return $result;
-        } else {
-            throw new Exception("Project not found");
-        }
-    }
+  }
 }
