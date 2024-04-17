@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Bipasana Poudel's Portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/styles/style.css"></head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -94,4 +95,23 @@
             </div>
         </div>
         <script src="./assets/js/index.js" charset="UTF-8"></script>
+        <script>
+            $(document).ready(function() {
+                $(document).on('click', '.btn-outline-secondary', function() {
+                    var card = $(this).closest('.card');
+                    var projectId = card.data('project-id');
+                    $.ajax({
+                        url: 'project_detail.php',
+                        type: 'GET',
+                        data: { id: projectId },
+                        success: function(data) {
+                            console.log(data);
+                        },
+                        error: function(jqXHR, textStatus, errorThrown) {
+                            console.error("Error fetching project details:", textStatus, errorThrown);
+                        }
+                    });
+                });
+            });
+        </script>
 </body>
