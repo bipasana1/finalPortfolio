@@ -9,26 +9,26 @@ class MainController extends Controller
 
     public function homepage()
     {
-                include '../public/assets/views/main/homepage.php';
+                include '../public/assets/views/main/homepage.html';
 //        $this->view('../public/assets/views/main/example-homepage.php', true);
     }
     public function resume()
     {
-        include '../public/assets/views/main/resume.php';
+        include '../public/assets/views/main/resume.html';
     }
     public function projects()
     {
-        include '../public/assets/views/main/projects.php';
+        include '../public/assets/views/main/projects.html';
         
     }
     public function contact()
     {
-        include '../public/assets/views/main/contact.php';
+        include '../public/assets/views/main/contact.html';
     
     }
     public function notFound()
     {
-        $this->view('../public/assets/views/main/404.php', true);
+        $this->view('../public/assets/views/main/404.html', true);
     }
 
 }
