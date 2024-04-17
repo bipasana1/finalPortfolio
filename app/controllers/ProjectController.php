@@ -1,5 +1,5 @@
 <?php
-
+//Fetching project from the database
 // Create a function to handle request for project Details
 //Get project ID from the user click
 // Call project model method to fetch the specific project Details

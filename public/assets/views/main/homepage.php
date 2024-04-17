@@ -1,19 +1,3 @@
-<?php
-// Assuming you have a database connection established
-
-// Check if the "More Details" button is clicked
-if(isset($_POST['more_details'])) {
-    // Retrieve project details from the database based on the clicked project
-    // Assuming you have a function to fetch project details from the database
-    $project_id = $_POST['project_id'];
-    $project_details = fetchProjectDetails($project_id);
-
-    // Redirect to project.php with project details as URL parameters
-    header("Location: project.php?project_id={$project_id}&title={$project_details['title']}&description={$project_details['description']}&skills_used={$project_details['skills_used']}&tools_used={$project_details['tools_used']}&link={$project_details['link']}");
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
