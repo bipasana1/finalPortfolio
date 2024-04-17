@@ -29,4 +29,18 @@ class ProjectsController {
       return null; 
     }
   }
+  public function projects()
+  {
+    include '../public/assets/views/projects/projects.html';
+  }
+
+  public function projectDetails($projectId)
+  {
+    $project = $this->getProjectDetails($projectId);
+    if ($project) {
+      include '../public/assets/views/projects_details.html';
+    } else {
+
+    }
+  }
 }
