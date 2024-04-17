@@ -106,7 +106,7 @@
                     type: 'GET',
                     data: { id: projectId },
                     success: function(data) {
-                        $('#projectDetails').html(data); // Assuming the response is HTML
+                        $('#projectDetails').html(data); 
                     },
                     error: function(jqXHR, textStatus, errorThrown) {
                         console.error("Error fetching project details:", textStatus, errorThrown);
