@@ -30,10 +30,6 @@ $routes = [
         'controller' => MainController::class,
         'GET' => 'contact'
     ],
-    'projects.php' => [ 
-        'controller' => ProjectController::class, 
-        'GET' => 'getProjects' 
-    ],
     'project_detail.php' => [
         'controller' => ProjectController::class,
         'GET' => 'getProjectDetails'
