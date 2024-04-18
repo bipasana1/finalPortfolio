@@ -16,25 +16,3 @@ const observer = new IntersectionObserver((entries) => {
   
   const cards = document.querySelectorAll('.card');  
   cards.forEach((card) => observer.observe(card)); 
-
-  $(document).ready(function() {
-    $('.btn-outline-secondary').click(function() {
-        var projectId = $(this).data('id');
-        if (!projectId) {
-            console.error("Missing data-id attribute on button");
-            return;
-        }
-
-        $.ajax({
-            url: "project_detail.php",
-            type: "GET",
-            data: { id: projectId },
-            success: function(response) {
-                $('#project-details').html(response);
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.error("Error fetching project details:", textStatus, errorThrown);
-            }
-        });
-    });
-});
