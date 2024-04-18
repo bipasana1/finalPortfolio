@@ -27,29 +27,6 @@
             </ul>
         </header>
     </div>
-
-    <?php
-    require_once 'controllers/ProjectsController.php';
-
-    $projectId = isset($_GET['id']) ? (int)$_GET['id'] : null;
-
-    $projectsController = new ProjectsController($finalPortfolio);
-
-    $project = $projectsController->getProjectDetails($projectId);
-    ?>
-
-    <div class="container mt-5">
-        <?php if ($project): ?>
-            <h2><?php echo $project->getTitle(); ?></h2>
-            <p><?php echo $project->getDescription(); ?></p>
-            <p><b>Skills Used:</b> <?php echo $project->getSkills(); ?></p>
-            <p><b>Tools Used:</b> <?php echo $project->getTools(); ?></p>
-            <a href="<?php echo $project->getLink(); ?>" target="_blank" class="btn btn-primary">View Project</a>
-        <?php else: ?>
-            <p>Project not found.</p>
-        <?php endif; ?>
-    </div>
-
     <script src="./assets/js/index.js" charset="UTF-8"></script>
 </body>
 </html>

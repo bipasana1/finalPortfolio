@@ -2,6 +2,7 @@
 
 use app\controllers\UserController;
 use app\controllers\MainController;
+use app\controllers\ProjectController;
 
 $routes = [
     'users' => [
@@ -28,5 +29,13 @@ $routes = [
     'contact.php' => [
         'controller' => MainController::class,
         'GET' => 'contact'
+    ],
+    'projects.php' => [ 
+        'controller' => ProjectController::class, 
+        'GET' => 'getProjects' 
+    ],
+    'project_detail.php' => [
+        'controller' => ProjectController::class,
+        'GET' => 'getProjectDetails'
     ]
 ];

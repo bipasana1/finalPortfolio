@@ -1,46 +1,32 @@
 <?php
 
-require_once 'models/Project.php';
+namespace app\controllers;
 
-class ProjectsController {
-  private $db;
+use app\models\Project;
 
-  public function __construct($db) {
-    $this->db = $db; 
-  }
-
-  public function getProjectDetails($projectId) {
-    $sql = "SELECT * FROM projects WHERE project_id = :projectId";
-    $stmt = $this->db->prepare($sql);
-    $stmt->bindParam(":projectId", $projectId, PDO::PARAM_INT);
-    $stmt->execute();
-    $projectData = $stmt->fetch(PDO::FETCH_ASSOC); 
-
-    if ($projectData) {
-      return new Project(
-        $projectData['project_id'],
-        $projectData['title'],
-        $projectData['description'],
-        $projectData['skills_used'],
-        $projectData['tools_used'],
-        $projectData['link']
-      );
-    } else {
-      return null; 
+class ProjectController
+{
+    public function getProjects() {
+        $projectModel = new Project();
+        header("Content-Type: application/json");
+        $projects = $projectModel->getAllProjects(); // Assuming a method to get all projects
+        echo json_encode($projects);
+        exit();
     }
-  }
-  public function projects()
-  {
-    include '../public/assets/views/projects/projects.html';
-  }
 
-  public function projectDetails($projectId)
-  {
-    $project = $this->getProjectDetails($projectId);
-    if ($project) {
-      include '../public/assets/views/projects_details.html';
-    } else {
+    public function getProjectDetails($id) {
+        $projectModel = new Project();
+        header("Content-Type: application/json");
+        $project = $projectModel->getProjectById($id);
 
+        // Handle cases where project is not found (optional)
+        if (!$project) {
+            http_response_code(404);
+            echo json_encode(['message' => 'Project not found']);
+            exit();
+        }
+
+        echo json_encode($project);
+        exit();
     }
-  }
 }
