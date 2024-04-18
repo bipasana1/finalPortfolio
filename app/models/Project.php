@@ -8,6 +8,8 @@ class Project
 {
     use Database;
 
+    protected $table = 'projects';
+
     public function getAllProjects() {
         $query = "SELECT * FROM projects";
         return $this->query($query);

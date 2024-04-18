@@ -14,23 +14,23 @@ $routes = [
         'controller' => UserController::class,
         'GET' => 'getUsers',
     ],
-    'homepage.php' => [
+    'homepage' => [
         'controller' => MainController::class,
         'GET' => 'homepage'
     ],
-    'resume.php' => [
+    'resume' => [
         'controller' => MainController::class,
         'GET' => 'resume'
     ],
-    'projects.php' => [
+    'projects' => [
         'controller' => MainController::class,
         'GET' => 'projects'
     ],
-    'contact.php' => [
+    'contact' => [
         'controller' => MainController::class,
         'GET' => 'contact'
     ],
-    'project_detail.php' => [
+    'project_detail' => [
         'controller' => ProjectController::class,
         'GET' => 'getProjectDetails'
     ]

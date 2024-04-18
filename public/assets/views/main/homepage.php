@@ -17,16 +17,16 @@
         <header class="d-flex flex-wrap justify-content-between align-items-center py-3 mb-0 border-bottom">
             <div class="d-flex align-items-center">
                 <img src="./assets/views/images/bitmoji.jpeg" alt="Bipasana's Bitmoji" class="bitmoji">
-                <a href="./homepage.php" class="text-decoration-none">
+                <a href="./homepage" class="text-decoration-none">
                     <span class="fs-4">Bipasana Poudel</span>
                 </a>
             </div>
     
             <ul class="nav nav-pills">
-                <li class="nav-item"><a href="./homepage.php" class="nav-link active" aria-current="page">Home</a></li>
-                <li class="nav-item"><a href="./projects.php" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="./resume.php" class="nav-link">Resume</a></li>
-                <li class="nav-item"><a href="./contact.php" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="./homepage" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a href="./projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="./resume" class="nav-link">Resume</a></li>
+                <li class="nav-item"><a href="./contact" class="nav-link">Contact</a></li>
             </ul>
         </header>
     </div>

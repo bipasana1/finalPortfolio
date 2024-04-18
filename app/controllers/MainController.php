@@ -33,7 +33,7 @@ class MainController extends Controller
     }
     public function notFound()
     {
-        $this->view('../public/assets/views/main/404.html', true);
+        include '../public/assets/views/main/404.html';
     }
 
 }
