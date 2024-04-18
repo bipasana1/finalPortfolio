@@ -27,6 +27,12 @@
             </ul>
         </header>
     </div>
-    <script src="./assets/js/index.js" charset="UTF-8"></script>
+    <div class="container mt-5">
+        <div id="project-details">
+            <h2 id="project-title"></h2>
+            <p id="project-description"></p>
+            <a id="project-link" href="#" target="_blank">Project Link</a>
+        </div>
+    </div>
 </body>
 </html>

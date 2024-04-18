@@ -18,22 +18,22 @@ const observer = new IntersectionObserver((entries) => {
   cards.forEach((card) => observer.observe(card)); 
 
   $(document).ready(function() {
-    $('.see-details').click(function() {
-        console.log("More Details clicked");
-        const projectId = $(this).data('id');
-        console.log("Project ID:", projectId);
+    $('.btn-outline-secondary').click(function() {
+        var projectId = $(this).data('id');
+        if (!projectId) {
+            console.error("Missing data-id attribute on button");
+            return;
+        }
 
-        // Use AJAX to fetch project details
         $.ajax({
-            url: 'project_detail', // Check if this is the correct endpoint
-            type: 'GET',
+            url: "project_detail.php",
+            type: "GET",
             data: { id: projectId },
             success: function(response) {
-                console.log("AJAX Success:", response);
-                // Handle successful response
+                $('#project-details').html(response);
             },
             error: function(jqXHR, textStatus, errorThrown) {
-                console.error('Error fetching project details:', textStatus, errorThrown);
+                console.error("Error fetching project details:", textStatus, errorThrown);
             }
         });
     });
