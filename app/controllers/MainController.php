@@ -28,7 +28,7 @@ class MainController extends Controller
     }
     public function contact()
     {
-        include '../public/assets/views/main/contact.html';
+        include '../public/assets/views/main/contact.php';
     
     }
     public function notFound()
