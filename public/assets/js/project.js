@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 cardDiv.className = 'card shadow-sm fade-in';
 
                 const img = document.createElement('img');
-                img.className = "easyEatz"; // Assuming 'className' is a property that has values like 'easyEatz', 'tinDog', etc.
+                img.className = "easyEatz";
                 img.src = "./assets/views/images/easyEatz.png";
                 img.alt = project.imageAlt;
 
@@ -46,5 +46,6 @@ document.addEventListener('DOMContentLoaded', function(){
                 container.appendChild(colDiv);
         });
     })
+    .catch(error => console.error(error));
 });
 
