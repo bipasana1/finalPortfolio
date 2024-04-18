@@ -37,6 +37,15 @@
     
     <div class="projects">
         <div class="album py-5 card-container">
+                <div class="container">
+                    <div class="row row-cols-2 g-3">
+                    </div>
+                </div>
+        </div>
+    </div>
+    
+    <!-- <div class="projects">
+        <div class="album py-5 card-container">
             <div class="container">
                 <div class="row row-cols-2 g-3">
                     <div class="col">
@@ -94,5 +103,8 @@
                 </div>
             </div>
         </div>
-        <script src="./assets/js/index.js" charset="UTF-8"></script>
+    </div> -->
+
+    <!-- <script src="./assets/js/index.js" charset="UTF-8"></script> -->
+    <script src="./assets/js/project.js" charset="UTF-8"></script>
 </body>

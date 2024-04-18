@@ -3,10 +3,10 @@
 if($_SERVER['SERVER_NAME'] == 'localhost')
 {
 	/** database config **/
-	define('DBNAME', $env['DBNAME']);
-	define('DBHOST', $env['DBHOST']);
-	define('DBUSER', $env['DBUSER']);
-	define('DBPASS', $env['DBPASS']);
+	define('DBNAME', $env['finalPortfolio']);
+	define('DBHOST', $env['localhost']);
+	define('DBUSER', $env['root']);
+	define('DBPASS', $env['root']);
 	define('DBDRIVER', '');
 	
 	define('ROOT', 'http://localhost:8888/');

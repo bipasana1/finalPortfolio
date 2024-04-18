@@ -34,20 +34,8 @@ $routes = [
         'controller' => ProjectController::class,
         'GET' => 'getProjectDetails'
     ],
-    // 'projects' => [
-    //     'controller' => ProjectController::class,
-    //     'GET' => 'getProjectDetails'
-    // ],
-    // 'projects' => [
-    //     'controller' => ProjectController::class,
-    //     'GET' => 'getProjectDetails'
-    // ],
-    // 'projects' => [
-    //     'controller' => ProjectController::class,
-    //     'GET' => 'getProjectDetails'
-    // ],
-    // 'projects' => [
-    //     'controller' => ProjectController::class,
-    //     'GET' => 'getProjectDetails'
-    // ]
+    'get_projects' => [
+        'controller' => ProjectController::class,
+        'GET' => 'getProjects'
+    ]
 ];

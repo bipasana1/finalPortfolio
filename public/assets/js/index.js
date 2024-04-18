@@ -16,3 +16,4 @@ const observer = new IntersectionObserver((entries) => {
   
   const cards = document.querySelectorAll('.card');  
   cards.forEach((card) => observer.observe(card)); 
+
