@@ -37,5 +37,17 @@ $routes = [
     'button' => [
         'controller' => ProjectController::class,
         'GET' => 'getProjectDetails'
+    ],
+    'button' => [
+        'controller' => ProjectController::class,
+        'GET' => 'getProjectDetails'
+    ],
+    'button' => [
+        'controller' => ProjectController::class,
+        'GET' => 'getProjectDetails'
+    ],
+    'button' => [
+        'controller' => ProjectController::class,
+        'GET' => 'getProjectDetails'
     ]
 ];
