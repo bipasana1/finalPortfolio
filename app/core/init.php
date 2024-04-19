@@ -8,12 +8,6 @@ define('APP_VIEWS', APP_PUBLIC . '/assets/views');
 define('APP_STYLES', APP_PUBLIC . '/assets/styles');
 define('APP_IMAGES', BASE_PATH . '/assets/views/images');
 
-// Database configuration constants
-// define('DB_NAME', $_ENV['DBNAME']);
-// define('DB_HOST', $_ENV['DBHOST']);
-// define('DB_USER', $_ENV['DBUSER']);
-// define('DB_PASS', $_ENV['DBPASS']);
-
 spl_autoload_register(function ($classname) {
     require $filename = BASE_PATH . '/' . str_replace('\\', '/', $classname) . ".php";
 });

@@ -29,7 +29,7 @@ VALUES (
     'https://imgur.com/a/NiQHTjk'
 );
 
-INSERT INTO projects (title, description, skills_used, tools_used, link) 
+INSERT INTO projects (title, description, skills_used, tools_used, link, image_url) 
 VALUES (
     'Library Database', 
     'Designed a library databse using SQL',
@@ -39,7 +39,7 @@ VALUES (
     'https://imgur.com/a/cxueYBl'
 );
 
-INSERT INTO projects (title, description, skills_used, tools_used, link) 
+INSERT INTO projects (title, description, skills_used, tools_used, link, image_url) 
 VALUES (
     'Test Project', 
     'Designed a library databse using SQL',

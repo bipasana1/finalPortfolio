@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 const img = document.createElement('img');
                 img.className = "easyEatz";
-                img.src = project.image_url.trim();
+                img.src = project.image_url.replace(/\\\//g, "/");
                 img.alt = project.imageAlt;
 
                 const cardBodyDiv = document.createElement('div');
@@ -49,3 +49,14 @@ document.addEventListener('DOMContentLoaded', function(){
     .catch(error => console.error(error));
 });
 
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+      }
+    });
+  });
+  
+  const cards = document.querySelectorAll('.card');  
+  cards.forEach((card) => observer.observe(card)); 
