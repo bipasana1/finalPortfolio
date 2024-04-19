@@ -119,58 +119,59 @@
     opacity: 1;
   }
 
+.projects {
+    background-color: #D3C0E0; 
+}
+
 .projects-title {
     color: #7469B6;
     margin-bottom: 20px;
     font-family: 'Bebas Neue';
-}
-
-.projects {
-    background-color: #D3C0E0; 
+    font-size: 48px;
 }
 
 .card {
     background-color: #FAF4FC;
 }
 
-
 .resume-section {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
     height: 100vh;
     background-color: #D3C0E0;
 }
+
 .resume-section img {
-    max-width: 100%; 
-    max-height: 100%;
+    max-width: 70%; 
+    max-height: 70%;
     width: auto;
     height: auto;
-    margin: auto; 
+    margin-bottom: 20px;
 }
-
-.resume-section h2{
+.resume-section h2 {
     color: #7469B6;
     margin-bottom: 20px;
     font-family: 'Bebas Neue';
+    font-size: 48px;
+    margin-top: 20px;
 }
 
 .download-button {
-    display: block;
     width: 200px;
     padding: 10px;
-    margin: 10px auto 0; 
-    background-color: #AD88C6; 
-    color: #fff; 
+    background-color: #7469B6;
+    color: #FAF4FC;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
     text-align: center;
     text-decoration: none;
-    cursor: pointer;
 }
 
 .download-button:hover {
-    background-color: #AD88C6; 
+    background-color: #7469B6;
 }
 
 .contact{
@@ -184,7 +185,7 @@
 
 .contact h2{
     color: #7469B6;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     font-family: 'Bebas Neue';
 }
 
@@ -218,6 +219,13 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #7469B6; 
 }
+
+#contact-social{
+    position: absolute;
+    bottom: 15px;
+    left: 47%;
+}
+
 
 @media (max-width: 768px) {
     .projects .container .row {

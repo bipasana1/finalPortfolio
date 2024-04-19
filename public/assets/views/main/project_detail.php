@@ -27,12 +27,28 @@
             </ul>
         </header>
     </div>
-    <div class="container mt-5">
-        <div id="project-details">
-            <h2 id="project-title"></h2>
-            <p id="project-description"></p>
-            <a id="project-link" href="#" target="_blank">Project Link</a>
+
+    <div class="container">
+    <?php
+    $project = $projectController->getProjectDetails(); 
+
+    if ($project) {
+        ?>
+        <div class="project-details">
+            <h2><?php echo $project['title']; ?></h2>
+            <img src="<?php echo $project['image_url']; ?>" alt="<?php echo $project['image_alt']; ?>">
+            <p><?php echo $project['description']; ?></p>
         </div>
-    </div>
+        <?php
+    } else {
+        ?>
+        <div class="error-message">
+            <p>Project details not found.</p>
+        </div>
+        <?php
+    }
+    ?>
+</div>
+    <script src="./assets/js/project.js" charset="UTF-8"></script>
 </body>
 </html>

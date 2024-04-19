@@ -9,7 +9,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 
@@ -35,7 +34,7 @@
     <div class="projects">
         <div class="album py-5 card-container">
         <div class="text-center pt-2 pb-4">
-            <h2 class="projects-title">Projects</h2>
+            <h2 id="projects-title" class="projects-title">Projects</h2>
         </div>
                 <div class="container">
                     <div class="row row-cols-2 g-3">

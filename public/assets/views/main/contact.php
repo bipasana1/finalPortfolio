@@ -28,7 +28,7 @@
 <div class="conatiner">
     <div class="contact">    
         <h2>Contact Me</h2><br>
-        <p>Hello! My name is Bipasana Poudel. I am studying computer science at Fordham University. I would love to hear from you!</p>
+        <p>I would love to hear from you!</p>
     <form id="form-id" method="POST">
         <input type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
         <input type="text" id="email" name="email" placeholder="Email"><br>
@@ -36,7 +36,7 @@
         <input type="text" id="message" name="message" placeholder="Message"><br>
         <input type="submit" value="Send">
     </form>
-    <div class="social-container">                
+    <div id="contact-social" class="social-container">                
         <a href="https://www.linkedin.com/in/bipasanapoudel/" class="text-decoration-none">
         <img class="linkedin" src="./assets/views/images/linkedin.jpg" alt="Bipasana's LinkedIn">
         </a>

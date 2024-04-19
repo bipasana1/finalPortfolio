@@ -22,9 +22,9 @@ $routes = [
         'GET' => 'contact',
         'POST' => 'saveUser'
     ],
-    'project_detail' => [
+    'project_details' => [
         'controller' => ProjectController::class,
-        'GET' => 'getProjectDetails'
+        'GET' => 'get_project_details'
     ],
     'get_projects' => [
         'controller' => ProjectController::class,

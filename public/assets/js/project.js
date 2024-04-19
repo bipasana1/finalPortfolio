@@ -34,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 button.type = 'button';
                 button.className = 'btn btn-sm btn-outline-secondary';
                 button.textContent = 'More Details';
+                button.dataset.projectId = project.id;
 
                 // Assemble the card components
                 divBtnGroup.appendChild(button);
@@ -45,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function(){
                 colDiv.appendChild(cardDiv);
                 container.appendChild(colDiv);
         });
+            const detailButtons = document.querySelectorAll('.btn-outline-secondary');
+            detailButtons.forEach(button => {
+              button.addEventListener('click', handleMoreDetailsClick);
     })
     .catch(error => console.error(error));
 });
@@ -60,3 +64,24 @@ const observer = new IntersectionObserver((entries) => {
   
   const cards = document.querySelectorAll('.card');  
   cards.forEach((card) => observer.observe(card)); 
+
+// open project_detail page
+  function handleMoreDetailsClick(event) {
+    const projectId = event.currentTarget.dataset.projectId;
+    window.location.href = `project_detail.php?project_id=${projectId}`;
+  
+    $.ajax({
+      url: 'http://localhost:8888/get_project_details',
+      method: 'GET',
+      data: { id: projectId },
+      success: function (data) {
+        $('#project-title').text(data.title);
+        $('#project-description').text(data.description);
+        $('#project-link').attr('href', data.project_link);
+      },
+      error: function (error) {
+        console.error('Error fetching project details:', error);
+      }
+    });
+  }
+});
