@@ -111,7 +111,7 @@
 } 
 
 .fade-in {
-    opacity: 0;
+    opacity: 100;
     transition: opacity 1s ease-in-out;
   }
   

@@ -29,7 +29,7 @@
         <h2>Contact Me</h2><br>
         <p>Hello! My name is Bipasana Poudel. I am studying computer science at Fordham University. I would love to hear from you!</p>
         <form>
-    <form>
+    <form method="post" action="ContactController.php">
         <input type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
         <input type="text" id="email" name="email" placeholder="Email"><br>
         <input type="text" id="phonenum" name="phonenum" placeholder="Phone Number"><br>
