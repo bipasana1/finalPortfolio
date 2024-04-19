@@ -9,8 +9,8 @@
     letter-spacing: 1px;
 }
 
-.greetings h3{
-    font-family: "Roboto Serif" ;
+.greetings h3 {
+    font-family: "Roboto Serif";
     font-weight: 100;
 }
 
@@ -20,7 +20,6 @@
     height: 90vh;
     padding: 250px;
     text-align: center;
-    
 }
 
 .her-subtitle {
@@ -38,12 +37,12 @@
     color: #7469B6; 
 }
 
-.nav-pills .nav-link.active{
+.nav-pills .nav-link.active {
     background-color: #7469B6; 
     color: #FFE6E6;
 }
 
-.headshot-container{
+.headshot-container {
     position: absolute;
     bottom: 20%;
     left: 50%;
@@ -61,63 +60,41 @@
     object-fit: cover;
 }
 
-.name{
+.name {
     font-family: 'Bebas Neue';
     letter-spacing: 5px;
 }
 
-.social-container{
+.social-container {
     position: absolute;
     bottom: 5%;
     left: 47%;
 }
 
-.linkedin{
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    
-}
-
-.gmail{
+.linkedin,
+.gmail {
     border-radius: 50%;
     width: 40px;
     height: 40px;
 }
 
-.library{
+.library,
+.tinDog,
+.easyEatz,
+.todoList {
     width: 100%;
     height: 225px;
     object-fit: cover;
-} 
-
-
-.tinDog{
-    width: 100%;
-    height: 225px;
-    object-fit: cover;
-} 
-
-.easyEatz{
-    width: 100%;
-    height: 225px;
-    object-fit: cover;
-} 
-
-.todoList{
-    width: 100%;
-    height: 225px;
-    object-fit: cover;
-} 
+}
 
 .fade-in {
     opacity: 100;
     transition: opacity 1s ease-in-out;
-  }
-  
-  .fade-in.is-visible {
+}
+
+.fade-in.is-visible {
     opacity: 1;
-  }
+}
 
 .projects {
     background-color: #D3C0E0; 
@@ -150,6 +127,7 @@
     height: auto;
     margin-bottom: 20px;
 }
+
 .resume-section h2 {
     color: #7469B6;
     margin-bottom: 20px;
@@ -174,7 +152,7 @@
     background-color: #7469B6;
 }
 
-.contact{
+.contact {
     display: flex;
     justify-content: center;  
     align-items: center;
@@ -183,13 +161,13 @@
     background-color: #D3C0E0;
 }
 
-.contact h2{
+.contact h2 {
     color: #7469B6;
     margin-bottom: 10px;
     font-family: 'Bebas Neue';
 }
 
-.contact p{
+.contact p {
     font-size: 16px;
     margin-bottom: 20px;
 }
@@ -198,29 +176,29 @@ form {
     width: 300px; 
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #FAF4FC;
-    border-radius: 5px;
-}
-
+input[type="text"],
 input[type="submit"] {
     width: 100%;
     padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+input[type="text"] {
+    border: 1px solid #FAF4FC;
+}
+
+input[type="submit"] {
     background-color: #7469B6;
     color: #FAF4FC;
     border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background-color: #7469B6; 
+    background-color: #7469B6;
 }
 
-#contact-social{
+#contact-social {
     position: absolute;
     bottom: 15px;
     left: 47%;
@@ -228,7 +206,42 @@ input[type="submit"]:hover {
 
 
 @media (max-width: 768px) {
-    .projects .container .row {
-      grid-template-columns: repeat(1, 1fr); 
+    .introduction {
+        padding: 150px;
     }
-  }
+
+    .bitmoji {
+        width: 80px;
+        margin-left: -40px; 
+    }
+
+    .nav-pills .nav-link.active {
+        font-size: 18px; 
+    }
+
+    .headshot-container {
+        bottom: 10%; 
+    }
+
+    .social-container {
+        bottom: 2%; 
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .library,
+    .tinDog,
+    .easyEatz,
+    .todoList {
+        height: 150px; 
+    }
+
+    .contact {
+        padding: 100px;
+    }
+
+    .contact h2 {
+        margin-bottom: 10px;
+    }
+}
+
