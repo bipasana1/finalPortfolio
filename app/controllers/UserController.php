@@ -14,7 +14,7 @@ class UserController extends Controller
         $message = $inputData['message'];
 
         if ($fullname) {
-            $name = htmlspecialchars($fullname, ENT_QUOTES|ENT_HTML5, 'UTF-8', true);
+            $fullname = htmlspecialchars($fullname, ENT_QUOTES|ENT_HTML5, 'UTF-8', true);
             if (strlen($fullname) < 2) {
                 $errors['nameTooShort'] = 'name is too short';
             }
