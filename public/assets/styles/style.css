@@ -120,7 +120,9 @@
   }
 
 .projects-title {
-    background-color: #D3C0E0;
+    color: #7469B6;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue';
 }
 
 .projects {
@@ -145,6 +147,12 @@
     width: auto;
     height: auto;
     margin: auto; 
+}
+
+.resume-section h2{
+    color: #7469B6;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue';
 }
 
 .download-button {
@@ -177,7 +185,7 @@
 .contact h2{
     color: #7469B6;
     margin-bottom: 20px;
-    font-family: 'Bebas Neue'
+    font-family: 'Bebas Neue';
 }
 
 .contact p{

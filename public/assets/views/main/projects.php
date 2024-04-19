@@ -31,12 +31,12 @@
             </ul>
         </header>
     </div>
-    <div class="text-center py-3">
-            <h2 class="projects-title">Projects</h2>
-        </div>
     
     <div class="projects">
         <div class="album py-5 card-container">
+        <div class="text-center pt-2 pb-4">
+            <h2 class="projects-title">Projects</h2>
+        </div>
                 <div class="container">
                     <div class="row row-cols-2 g-3">
                     </div>
