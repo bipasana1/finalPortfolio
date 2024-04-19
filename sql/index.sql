@@ -32,8 +32,8 @@ VALUES (
 INSERT INTO projects (title, description, skills_used, tools_used, link, image_url) 
 VALUES (
     'Library Database', 
-    'Designed a library databse using SQL',
-    'SQL',
+    'Designed and implemented a comprehensive Database Management System (DBMS) for an online book store using MySQL on storm.cis.fordham.edu',
+    'SQL, Critical Thinking, Relational Model',
     'MYSQL',
     'Link',
     'https://imgur.com/a/cxueYBl'
@@ -41,10 +41,10 @@ VALUES (
 
 INSERT INTO projects (title, description, skills_used, tools_used, link, image_url) 
 VALUES (
-    'Test Project', 
-    'Designed a library databse using SQL',
-    'SQL',
-    'MYSQL',
+    'To-do list', 
+    'Designed a to-do list is a list of items that need to be completed.',
+    'HTML, CSS, JavaScript',
+    'Google Tasks',
     'Link',
     'https://imgur.com/a/cxueYBl'
 );
