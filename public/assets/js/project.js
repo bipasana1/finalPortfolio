@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
                 const img = document.createElement('img');
                 img.className = "easyEatz";
-                img.src = project.image_url.replace(/\\\//g, "/");
+                img.src = project.image_url.replace(/\\/g, "/").trim();
                 img.alt = project.imageAlt;
 
                 const cardBodyDiv = document.createElement('div');

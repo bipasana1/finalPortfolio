@@ -29,11 +29,11 @@
         <h2>Contact Me</h2><br>
         <p>Hello! My name is Bipasana Poudel. I am studying computer science at Fordham University. I would love to hear from you!</p>
         <form>
-    <form method="post" action="ContactController.php">
-        <input type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
-        <input type="text" id="email" name="email" placeholder="Email"><br>
-        <input type="text" id="phonenum" name="phonenum" placeholder="Phone Number"><br>
-        <input type="text" id="message" name="message" placeholder="Message"><br>
+    <form id="form-id" method="post" action="ContactController.php">
+        <input for="InputName" type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
+        <input for="InputEmail" type="text" id="email" name="email" placeholder="Email"><br>
+        <input for="InputPhonenum" type="text" id="phonenum" name="phonenum" placeholder="Phone Number"><br>
+        <input for="InputMessage" type="text" id="message" name="message" placeholder="Message"><br>
         <input type="submit" value="Send">
     </form>
     <div class="social-container">                
@@ -46,4 +46,37 @@
     </div>
 </div>
 </div>
+<script>
+    $(document).ready(function() {
+
+      $('#form-id').on('submit', function (e) {
+        e.preventDefault();
+        const name = $('#InputName').val();
+        const email = $('#InputEmail').val();
+        const phonenum = $('#InputPhonenum').val();
+        const message = $('#InputMessage').val();
+        const data = {
+          name,
+          email,
+          phonenum,
+          message,
+        };
+        $.ajax({
+          url: `http://localhost:8888/contact`,
+          type: "POST",
+          data: data,
+          dataType: "json",
+          success: function (data) {
+            console.log(data);
+            window.location.replace("submit");
+          },
+          error: function (error) {
+            console.log(error);
+          },
+                          
+      });
+      });
+    });
+
+  </script>
 </body>

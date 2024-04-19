@@ -5,15 +5,6 @@ use app\controllers\MainController;
 use app\controllers\ProjectController;
 
 $routes = [
-    'users' => [
-        'controller' => UserController::class,
-        'GET' => 'getUsers',
-        'POST' => 'saveUsers'
-    ],
-    'view-users' => [
-        'controller' => UserController::class,
-        'GET' => 'getUsers',
-    ],
     'homepage' => [
         'controller' => MainController::class,
         'GET' => 'homepage'
@@ -27,8 +18,9 @@ $routes = [
         'GET' => 'projects'
     ],
     'contact' => [
-        'controller' => MainController::class,
-        'GET' => 'contact'
+        'controller' => UserController::class,
+        'GET' => 'contact',
+        'POST' => 'saveUser'
     ],
     'project_detail' => [
         'controller' => ProjectController::class,
