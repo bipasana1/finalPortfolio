@@ -29,7 +29,7 @@
         <h2>Contact Me</h2><br>
         <p>Hello! My name is Bipasana Poudel. I am studying computer science at Fordham University. I would love to hear from you!</p>
         <form>
-    <form id="form-id" method="post" action="ContactController.php">
+    <form id="form-id">
         <input for="InputFullname" type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
         <input for="InputEmail" type="text" id="email" name="email" placeholder="Email"><br>
         <input for="InputPhonenum" type="text" id="phonenum" name="phonenum" placeholder="Phone Number"><br>
@@ -62,16 +62,19 @@
           message,
         };
         $.ajax({
-          url: `http://localhost:8888/contact`,
+          url: `http://localhost:8888/contact#success`,
           type: "POST",
           data: data,
           dataType: "json",
           success: function (data) {
             console.log(data);
-            window.location.replace("submit");
+            $('#form-id').prepend('<p class="success-message">Thank you for contacting me! Your message has been submitted.</p>');
+            $('#form-id').find('input[type="text"]').val('');
+            window.location.replace("contact");
           },
           error: function (error) {
             console.log(error);
+            $('#form-id').prepend('<p class="error-message">Error submitting your message. Please try again.</p>');
           },
                           
       });

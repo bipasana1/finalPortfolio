@@ -15,7 +15,7 @@ VALUES (
   'UI/UX Design, Prototyping',
   'Figma',
   'https://www.figma.com/proto/XouNgAuC4bgGkQnwT6vhQx/EasyEatz?page-id=0%3A1&type=design&node-id=1-4&viewport=559%2C-718%2C0.77&t=K4U8WFLbQ7Sv0TgL-1&scaling=scale-down&mode=design',
-  'https://imgur.com/a/sfUSD1n'
+  'https://i.imgur.com/mA8FDbM.png'
 );
 
 
