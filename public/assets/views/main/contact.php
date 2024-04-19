@@ -30,10 +30,10 @@
         <h2>Contact Me</h2><br>
         <p>Hello! My name is Bipasana Poudel. I am studying computer science at Fordham University. I would love to hear from you!</p>
     <form id="form-id" method="POST">
-        <input for="InputFullname" type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
-        <input for="InputEmail" type="text" id="email" name="email" placeholder="Email"><br>
-        <input for="InputPhonenum" type="text" id="phonenum" name="phonenum" placeholder="Phone Number"><br>
-        <input for="InputMessage" type="text" id="message" name="message" placeholder="Message"><br>
+        <input type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
+        <input type="text" id="email" name="email" placeholder="Email"><br>
+        <input type="text" id="phonenum" name="phonenum" placeholder="Phone Number"><br>
+        <input type="text" id="message" name="message" placeholder="Message"><br>
         <input type="submit" value="Send">
     </form>
     <div class="social-container">                
@@ -51,15 +51,15 @@
 
       $('#form-id').on('submit', function (e) {
         e.preventDefault();
-        const fullname = $('#InputFullname').val();
-        const email = $('#InputEmail').val();
-        const phonenum = $('#InputPhonenum').val();
-        const message = $('#InputMessage').val();
+        const fullname = $('#fullname').val();
+        const email = $('#email').val();
+        const phonenum = $('#phonenum').val();
+        const message = $('#message').val();
         const data = {
-          name,
-          email,
-          phonenum,
-          message,
+          fullname: fullname,
+          email: email,
+          phonenum: phonenum,
+          message: message,
         };
         $.ajax({
           url: `http://localhost:8888/contact`,

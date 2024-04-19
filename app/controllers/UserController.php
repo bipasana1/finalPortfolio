@@ -10,7 +10,7 @@ class UserController extends Controller
         $errors = [];
         $fullname= $inputData['fullname'];
         $email= $inputData['email'];
-        $phonenum = $inputData['phone_number'];
+        $phonenum = $inputData['phonenum'];
         $message = $inputData['message'];
 
         if ($fullname) {
