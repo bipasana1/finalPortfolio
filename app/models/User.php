@@ -20,7 +20,7 @@ class User
         return $this->query($query, ['id' => $id]);
     }
     public function saveUser($inputData) {
-        $query = "INSERT INTO $this->table (email, name, phonenum, message) VALUES (:email, :name, :phonenum, :message);";
+        $query = "INSERT INTO $this->table (email, fullname, phonenum, message) VALUES (:email, :fullname, :phonenum, :message);";
         return $this->query($query, $inputData);
     
     }

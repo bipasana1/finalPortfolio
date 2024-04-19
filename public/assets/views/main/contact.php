@@ -30,7 +30,7 @@
         <p>Hello! My name is Bipasana Poudel. I am studying computer science at Fordham University. I would love to hear from you!</p>
         <form>
     <form id="form-id" method="post" action="ContactController.php">
-        <input for="InputName" type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
+        <input for="InputFullname" type="text" id="fullname" name="fullname" placeholder="Full Name"><br>
         <input for="InputEmail" type="text" id="email" name="email" placeholder="Email"><br>
         <input for="InputPhonenum" type="text" id="phonenum" name="phonenum" placeholder="Phone Number"><br>
         <input for="InputMessage" type="text" id="message" name="message" placeholder="Message"><br>
@@ -51,7 +51,7 @@
 
       $('#form-id').on('submit', function (e) {
         e.preventDefault();
-        const name = $('#InputName').val();
+        const fullname = $('#InputFullname').val();
         const email = $('#InputEmail').val();
         const phonenum = $('#InputPhonenum').val();
         const message = $('#InputMessage').val();

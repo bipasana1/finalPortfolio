@@ -8,14 +8,14 @@ class UserController extends Controller
 {
     public function validateUser($inputData) {
         $errors = [];
-        $name= $inputData['name'];
+        $fullname= $inputData['fullname'];
         $email= $inputData['email'];
         $phonenum = $inputData['phone_number'];
         $message = $inputData['message'];
 
-        if ($name) {
-            $name = htmlspecialchars($name, ENT_QUOTES|ENT_HTML5, 'UTF-8', true);
-            if (strlen($name) < 2) {
+        if ($fullname) {
+            $name = htmlspecialchars($fullname, ENT_QUOTES|ENT_HTML5, 'UTF-8', true);
+            if (strlen($fullname) < 2) {
                 $errors['nameTooShort'] = 'name is too short';
             }
         } else {
@@ -50,7 +50,7 @@ class UserController extends Controller
             exit();
         }
         return [
-            'name' => $name,
+            'fullname' => $fullname,
             'email' => $email,
             'phonenum' => $phonenum,
             'message' => $message,
@@ -74,7 +74,7 @@ class UserController extends Controller
     public function saveUser() {
         $inputData=
         [
-            'name' => $_POST['name'] ? $_POST['name']: false,
+            'fullname' => $_POST['fullname'] ? $_POST['fullname']: false,
             'email' => $_POST['email'] ? $_POST['email']: false,
             'phonenum' => $_POST['phonenum'] ? $_POST['phonenum']: false,
             'message' => $_POST['message'] ? $_POST['message']: false,
@@ -83,7 +83,7 @@ class UserController extends Controller
 
         $user = new User();
         $user-> saveUser([
-            'name' => $userData['name'],           
+            'fullname' => $userData['fullname'],           
             'email' => $userData['email'],
             'phonenum' => $userData['phonenum'],           
             'message' => $userData['message'],            
