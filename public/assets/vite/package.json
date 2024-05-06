@@ -6,7 +6,7 @@
     "build": "vite build"
   },
   "dependencies": {
-    "vue": "^3.4.16"
+    "vue": "^3.4.22"
   },
   "devDependencies": {
     "@popperjs/core": "^2.11.8",
